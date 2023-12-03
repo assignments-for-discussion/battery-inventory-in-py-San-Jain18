@@ -4,14 +4,14 @@ def count_batteries_by_health(present_capacities):
     "exchange": 0,
     "failed": 0
   }
-  # Constants
-  rated_capacity = 120  # Rated capacity of a new battery in Ah
+  # Some required Constants
+  rated_capacity = 120  # rated capacity of a new battery in Ah
 
   # Function to calculate SoH%
   def calculate_soh(present_capacity):
       return (present_capacity / rated_capacity) * 100
 
-  # Classify batteries based on SoH and update counts
+  # Classifcation of batteries based on SoH and updation of counts
   for present_capacity in present_capacities:
       soh = calculate_soh(present_capacity)
 
